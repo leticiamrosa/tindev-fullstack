@@ -35,6 +35,8 @@ module.exports = {
       bio,
       avatar
     });
+
+    console.log(dev);
     return res.json(dev);
   }
 };
