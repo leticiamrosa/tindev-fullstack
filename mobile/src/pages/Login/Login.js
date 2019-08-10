@@ -24,13 +24,11 @@ export default function Login({ navigation }) {
   }, [navigation]);
 
   async function handleLogin() {
-    console.warn("Iniciando");
     const response = await api.post("/devs", { username: user });
     const { _id } = response.data;
-    console.warn(response);
 
     await AsyncStorage.setItem("user", _id);
-    navigation.navigate("Main", { _id });
+    navigation.navigate("Main", { user: _id });
   }
 
   return (

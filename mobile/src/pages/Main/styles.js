@@ -8,7 +8,9 @@ export const Container = styled.SafeAreaView`
   justify-content: space-between;
 `;
 
-export const Logo = styled.Image``;
+export const Logo = styled.Image`
+  margin-top: 40px;
+`;
 
 export const CardContainer = styled.View`
   flex: 1;
@@ -27,6 +29,7 @@ export const Card = styled.View`
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: ${props => props.zIndex};
 `;
 
 export const CardAvatar = styled.Image`
@@ -51,3 +54,29 @@ export const Description = styled.Text`
   margin-top: 8;
   line-height: 18;
 `;
+
+export const ButtonContainer = styled.View`
+  flex-direction: row;
+  margin-bottom: 40px;
+`;
+
+export const Button = styled.TouchableOpacity`
+  padding: 20px;
+  border-radius: 50;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* elavation: 2; */
+`;
+
+export const WithoutUsers = styled.Text`
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  align-self: center;
+  justify-content: center;
+`;
+
+export const ButtonIcon = styled.Image``;

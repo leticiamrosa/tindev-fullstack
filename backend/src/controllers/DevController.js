@@ -12,6 +12,7 @@ module.exports = {
         { _id: { $nin: loggerDev.dislikes } }
       ]
     });
+    return res.json(users);
   },
 
   async store(req, res) {
@@ -36,7 +37,6 @@ module.exports = {
       avatar
     });
 
-    console.log(dev);
     return res.json(dev);
   }
 };
