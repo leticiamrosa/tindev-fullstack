@@ -1,12 +1,12 @@
-<h1 align="center">Welcome to Tindev FrontEnd 👋</h1>
+<h1 align="center">Welcome to Tindev Backend 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/lemonoob">
     <img alt="Twitter: lemonoob" src="https://img.shields.io/twitter/follow/lemonoob.svg?style=social" target="_blank" />
   </a>
 </p>
 
-> Web application built with ReactJs
+> Application API built in Nodejs
 
 ## Install
 
@@ -17,13 +17,7 @@ npm install
 ## Usage
 
 ```sh
-npm start
-```
-
-## Run tests
-
-```sh
-npm run test
+npm run dev
 ```
 
 ## Author
