@@ -7,6 +7,11 @@ export const Container = styled.div`
   padding: 40px 0;
   text-align: center;
   justify-content: center;
+
+  .image-logo {
+    height: auto;
+    width: 20%;
+  }
 `;
 
 export const Footer = styled.footer`
@@ -40,7 +45,8 @@ export const Username = styled.h6`
 
 export const Bio = styled.p`
   line-height: 20px;
-  margin-top: 40px;
+  margin-top: 32px;
+  margin-bottom: 16px;
   color: ${colors.placeholder};
 `;
 
@@ -56,8 +62,8 @@ export const ButtonIcon = styled.img``;
 export const Button = styled.button`
   border: none;
   background: none;
-  height: 50px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+  height: 40px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
   border: 0;
   border-radius: 4px;
   background-color: white;

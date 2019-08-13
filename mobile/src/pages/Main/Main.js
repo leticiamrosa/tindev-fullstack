@@ -22,36 +22,37 @@ import like from "../../assets/like.png";
 import dislike from "../../assets/dislike.png";
 
 export default function Main({ navigation }) {
-  const id = navigation.getParam("user");
-  const [users, setUsers] = useState([]);
+  const loggedUserId = navigation.getParam("user");
 
+  const [users, setUsers] = useState([]);
   useEffect(() => {
     async function loadUsers() {
       const response = await api.get("/devs", {
         headers: {
-          user: id
+          user: loggedUserId
         }
       });
       setUsers(response.data);
     }
 
     loadUsers();
-  }, [id]);
+  }, [loggedUserId]);
 
-  async function handleLike(id) {
-    await api.post(`/devs/${id}/likes`, null, {
-      headers: { user: id }
+  async function handleLike() {
+    const [user, ...rest] = users;
+    await api.post(`/devs/${user._id}/likes`, null, {
+      headers: { user: loggedUserId }
     });
-
-    setUsers(users.filter(user => user._id !== id));
+    setUsers(rest);
   }
 
-  async function handleDislike(id) {
-    await api.post(`/devs/${id}/dislikes`, null, {
-      headers: { user: id }
+  async function handleDislike() {
+    const [user, ...rest] = users;
+    await api.post(`/devs/${user._id}/dislikes`, null, {
+      headers: { user: loggedUserId }
     });
 
-    setUsers(users.filter(user => user._id !== id));
+    setUsers(rest);
   }
 
   async function handleLogout() {
@@ -86,10 +87,10 @@ export default function Main({ navigation }) {
       </CardContainer>
 
       <ButtonContainer>
-        <Button onPress={() => handleLike()}>
+        <Button onPress={handleDislike}>
           <ButtonIcon source={dislike} />
         </Button>
-        <Button onPress={() => handleDislike()}>
+        <Button onPress={handleLike}>
           <ButtonIcon source={like} />
         </Button>
       </ButtonContainer>
