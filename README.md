@@ -18,18 +18,3 @@ npm install
 ```sh
 Put the backend to run and choose which application you want to run (Web or Mobile)
 ```
-
-## Author
-
-👤 **@leticiamrosa**
-
-- Twitter: [@lemonoob](https://twitter.com/lemonoob)
-- Github: [@leticiamrosa](https://github.com/leticiamrosa)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
